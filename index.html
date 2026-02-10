@@ -86,17 +86,20 @@
             font-size: 1.1rem;
         }
 
-        .feature span:first-child {
+        .feature .icon-circle {
             width: 24px;
             height: 24px;
+            min-width: 24px;
+            min-height: 24px;
             background: #F7A725;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
+            flex-shrink: 0;
         }
 
-        .feature svg {
+        .feature .icon-circle svg {
             width: 12px;
             height: 12px;
             fill: #fff;
@@ -288,18 +291,22 @@
         <div class="container">
             <div class="text-content">
                 <h1>احجز اجتماعاً تعريفياً مع فريق <span>وفرلي</span></h1>
-                <p>خطوة واحدة تفصلك عن حلول تمويلية ولوجستية متكاملة لمتجرك.</p>
+                <p>خطوة واحدة نحو لوحة تحكم متكاملة لإدارة متجرك، مع حلول تمويلية ولوجستية عبر شركائنا</p>
                 <div class="features">
                     <div class="feature">
-                        <span><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></span>
-                        <span>حلول تمويلية مرنة تناسب احتياجاتك</span>
+                        <span class="icon-circle"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></span>
+                        <span>لوحة تحكم متكاملة تمكّنك من إدارة عملياتك التجارية، متابعة أداء المبيعات، وإصدار الفواتير من مكان واحد</span>
                     </div>
                     <div class="feature">
-                        <span><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></span>
-                        <span>دعم لوجستي متكامل لمتجرك</span>
+                        <span class="icon-circle"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></span>
+                        <span>حلول تمويلية مرنة تناسب احتياجاتك، بالتعاون مع شركاء تمويليين معتمدين</span>
                     </div>
                     <div class="feature">
-                        <span><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></span>
+                        <span class="icon-circle"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></span>
+                        <span>دعم لوجستي متكامل عبر شركائنا اللوجستيين</span>
+                    </div>
+                    <div class="feature">
+                        <span class="icon-circle"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></span>
                         <span>فريق متخصص لخدمتك على مدار الساعة</span>
                     </div>
                 </div>
