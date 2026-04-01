@@ -280,6 +280,73 @@
                 font-size: 1.7rem;
             }
         }
+
+        .whatsapp-section {
+            background: #006d74;
+            padding: 40px 5%;
+            text-align: center;
+        }
+
+        .whatsapp-section h3 {
+            color: #fff;
+            font-size: 1.4rem;
+            margin-bottom: 25px;
+        }
+
+        .whatsapp-contacts {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .whatsapp-link {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background: #25D366;
+            color: #fff;
+            padding: 14px 28px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: 0.3s;
+            min-width: 260px;
+            justify-content: center;
+        }
+
+        .whatsapp-link:hover {
+            background: #1da851;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(37, 211, 102, 0.3);
+        }
+
+        .whatsapp-link svg {
+            width: 26px;
+            height: 26px;
+            fill: #fff;
+            flex-shrink: 0;
+        }
+
+        .whatsapp-link .contact-info {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 2px;
+        }
+
+        .whatsapp-link .contact-name {
+            font-size: 1rem;
+            font-weight: 700;
+        }
+
+        .whatsapp-link .contact-number {
+            font-size: 0.95rem;
+            direction: ltr;
+            opacity: 0.95;
+        }
     </style>
 </head>
 <body>
@@ -291,19 +358,11 @@
         <div class="container">
             <div class="text-content">
                 <h1>احجز اجتماعاً تعريفياً مع فريق <span>وفرلي</span></h1>
-                <p>خطوة واحدة نحو لوحة تحكم متكاملة لإدارة متجرك، مع حلول تمويلية ولوجستية عبر شركائنا</p>
+                <p>خطوة واحدة نحو لوحة تحكم متكاملة لإدارة مبيعاتك </p>
                 <div class="features">
                     <div class="feature">
                         <span class="icon-circle"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></span>
                         <span>لوحة تحكم متكاملة تمكّنك من إدارة عملياتك التجارية، متابعة أداء المبيعات، وإصدار الفواتير من مكان واحد</span>
-                    </div>
-                    <div class="feature">
-                        <span class="icon-circle"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></span>
-                        <span>حلول تمويلية مرنة تناسب احتياجاتك، بالتعاون مع شركاء تمويليين معتمدين</span>
-                    </div>
-                    <div class="feature">
-                        <span class="icon-circle"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></span>
-                        <span>دعم لوجستي متكامل عبر شركائنا اللوجستيين</span>
                     </div>
                     <div class="feature">
                         <span class="icon-circle"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></span>
@@ -320,33 +379,23 @@
                     <input type="hidden" name="_template" value="table">
 
                     <div class="form-group">
-                        <label>الاسم الكريم <span class="req">*</span></label>
+                        <label>الاسم<span class="req">*</span></label>
                         <input type="text" name="name" class="form-control" placeholder="أدخل اسمك الكامل" required>
                     </div>
 
                     <div class="form-group">
-                        <label>رقم الجوال / واتساب <span class="req">*</span></label>
+                        <label>رقم الجوال<span class="req">*</span></label>
                         <input type="tel" name="phone" class="form-control" placeholder="05xxxxxxxx" required>
                     </div>
 
                     <div class="form-group">
-                        <label>اسم المنشأة / المتجر <span class="req">*</span></label>
+                        <label>اسم الشركة<span class="req">*</span></label>
                         <input type="text" name="store_name" class="form-control" placeholder="أدخل اسم المنشأة" required>
                     </div>
 
                     <div class="form-group">
                         <label>نوع النشاط <span class="req">*</span></label>
-                        <select name="activity_type" id="activity_type" class="form-control" required>
-                            <option value="" disabled selected>اختر نوع النشاط</option>
-                            <option value="تجزئة">تجزئة</option>
-                            <option value="جملة">جملة</option>
-                            <option value="أخرى">أخرى</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group" id="other_activity_group" style="display: none;">
-                        <label>حدد نوع النشاط <span class="req">*</span></label>
-                        <input type="text" name="other_activity_details" id="other_activity_details" class="form-control" placeholder="اكتب نوع النشاط">
+                        <input type="text" name="activity_type" class="form-control" placeholder="أدخل نوع النشاط" required>
                     </div>
 
                     <button type="submit" class="submit-btn">تأكيد طلب الاجتماع</button>
@@ -356,22 +405,28 @@
             </div>
         </div>
     </section>
+
+    <section class="whatsapp-section">
+        <h3>للتواصل عبر واتساب</h3>
+        <div class="whatsapp-contacts">
+            <a href="https://wa.me/966501841685" target="_blank" class="whatsapp-link">
+                <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                <span class="contact-info">
+                    <span class="contact-name">حنان</span>
+                    <span class="contact-number">+966 50 184 1685</span>
+                </span>
+            </a>
+            <a href="https://wa.me/966580547907" target="_blank" class="whatsapp-link">
+                <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                <span class="contact-info">
+                    <span class="contact-name">طاهر</span>
+                    <span class="contact-number">+966 58 054 7907</span>
+                </span>
+            </a>
+        </div>
+    </section>
+
     <script>
-        const activitySelect = document.getElementById('activity_type');
-        const otherGroup = document.getElementById('other_activity_group');
-        const otherInput = document.getElementById('other_activity_details');
-
-        activitySelect.addEventListener('change', function() {
-            if (this.value === 'أخرى') {
-                otherGroup.style.display = 'block';
-                otherInput.required = true;
-            } else {
-                otherGroup.style.display = 'none';
-                otherInput.value = '';
-                otherInput.required = false;
-            }
-        });
-
         // AJAX Form Submission
         const form = document.getElementById('contactForm');
         const formCard = document.querySelector('.form-card');
